@@ -2,7 +2,7 @@
 
 namespace Business.Interfaces
 {
-    public interface IStudent
+    public interface IDrugCategory
     {
 
 

@@ -39,8 +39,15 @@ namespace Utilies.Helpers
         //Enum for menu
         public enum Menu
         {
+
             Exit,
-            AddNewDrug,
+            AddNewDrugCategory,
+            ShowDrugCategory,
+            UpdateDrugCategory,
+            DeleteDrugCategory,
+
+
+         /*   AddNewDrug,
             UpdateDrug,
             DeleteDrug,
             GetDrugWithId,
@@ -48,7 +55,7 @@ namespace Utilies.Helpers
             GetAllDrug,
             GetDrugWithSize,
             CreateDrugCategory,
-            GetAllDrugWithCategory
+            GetAllDrugWithCategory */
         }
     }
 }

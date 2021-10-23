@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataAccess.Repositories
 {
-    class DrugRepository
+  public  class DrugRepository
     {
     }
 }

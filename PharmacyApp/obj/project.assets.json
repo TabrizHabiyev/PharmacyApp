@@ -5,6 +5,10 @@
       "Business/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "DataAccess": "1.0.0",
+          "Entities": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Business.dll": {}
         },

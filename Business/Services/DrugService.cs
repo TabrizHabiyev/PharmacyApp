@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Business.Services
 {
-    class DrugService
+  public  class DrugService
     {
+
 
     }
 }

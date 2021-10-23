@@ -8,6 +8,7 @@ namespace DataAccess
     public static class DbContext
     {
         public static List<Drug> Drugs { get; }
+        
         public static List<DrugCategory> Categories { get; }
         static DbContext()
         {

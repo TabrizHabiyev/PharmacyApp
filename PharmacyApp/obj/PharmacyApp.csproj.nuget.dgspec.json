@@ -27,7 +27,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Tabriz\\Desktop\\PharmacyApp\\PharmacyApp\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Tabriz\\Desktop\\PharmacyApp\\PharmacyApp\\DataAccess\\DataAccess.csproj"
+              },
+              "C:\\Users\\Tabriz\\Desktop\\PharmacyApp\\PharmacyApp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Tabriz\\Desktop\\PharmacyApp\\PharmacyApp\\Entities\\Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

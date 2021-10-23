@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Business.Interfaces
 {
-    public interface IGroup
+    public interface IDrug
     {
 
 

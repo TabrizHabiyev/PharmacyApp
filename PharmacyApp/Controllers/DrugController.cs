@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using Utilies.Helpers;
 
-namespace AcademyApp.Controllers
+namespace PharmacyApp.Controllers
 {
     public class DrugController
     {
