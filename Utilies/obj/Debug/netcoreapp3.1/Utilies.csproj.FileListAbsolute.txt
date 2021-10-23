@@ -1,0 +1,10 @@
+C:\Users\Tabriz\Desktop\PharmacyApp\PharmacyApp\Utilies\bin\Debug\netcoreapp3.1\Utilies.deps.json
+C:\Users\Tabriz\Desktop\PharmacyApp\PharmacyApp\Utilies\bin\Debug\netcoreapp3.1\Utilies.dll
+C:\Users\Tabriz\Desktop\PharmacyApp\PharmacyApp\Utilies\bin\Debug\netcoreapp3.1\Utilies.pdb
+C:\Users\Tabriz\Desktop\PharmacyApp\PharmacyApp\Utilies\obj\Debug\netcoreapp3.1\Utilies.csproj.AssemblyReference.cache
+C:\Users\Tabriz\Desktop\PharmacyApp\PharmacyApp\Utilies\obj\Debug\netcoreapp3.1\Utilies.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tabriz\Desktop\PharmacyApp\PharmacyApp\Utilies\obj\Debug\netcoreapp3.1\Utilies.AssemblyInfoInputs.cache
+C:\Users\Tabriz\Desktop\PharmacyApp\PharmacyApp\Utilies\obj\Debug\netcoreapp3.1\Utilies.AssemblyInfo.cs
+C:\Users\Tabriz\Desktop\PharmacyApp\PharmacyApp\Utilies\obj\Debug\netcoreapp3.1\Utilies.csproj.CoreCompileInputs.cache
+C:\Users\Tabriz\Desktop\PharmacyApp\PharmacyApp\Utilies\obj\Debug\netcoreapp3.1\Utilies.dll
+C:\Users\Tabriz\Desktop\PharmacyApp\PharmacyApp\Utilies\obj\Debug\netcoreapp3.1\Utilies.pdb
