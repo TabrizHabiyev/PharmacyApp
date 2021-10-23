@@ -38,7 +38,16 @@ namespace DataAccess.Repositories
 
         public bool Delete(DrugCategory entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DbContext.Categories.Remove(entity);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
 

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Utilies.Helpers
 {
@@ -43,8 +41,9 @@ namespace Utilies.Helpers
             Exit,
             AddNewDrugCategory,
             ShowDrugCategory,
-            UpdateDrugCategory,
             DeleteDrugCategory,
+            UpdateDrugCategory,
+           
 
 
          /*   AddNewDrug,

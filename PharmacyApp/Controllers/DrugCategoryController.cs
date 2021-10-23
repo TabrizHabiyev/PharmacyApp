@@ -56,5 +56,34 @@ namespace PharmacyApp.Controllers
                 Helper.InfoText($"{group.Id} - {group.Name}");
             }
         }
+
+
+        //Delete Drug Category
+        public void Delete()
+        {
+            GetAll();
+            Helper.SelectText("Enter group id:");
+            string input = Console.ReadLine();
+            int groupId;
+            bool isTrue = int.TryParse(input, out groupId);
+            if (isTrue)
+            {
+                if (drugCategoryService.Delete(groupId) != null)
+                {
+                    Helper.SuggestText("Group is deleted");
+                    return;
+                }
+                else
+                {
+                    Helper.DangerText($"{groupId} is not find");
+                    return;
+                }
+            }
+            else
+            {
+                Helper.DangerText($"Please, select correct format");
+            }
+
+        }
     }
 }

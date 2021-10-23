@@ -30,9 +30,10 @@ namespace AcademyApp
                         case (int)Helper.Menu.ShowDrugCategory:
                             groupController.GetAll();
                             break;
-                        case (int)Helper.Menu.UpdateDrugCategory:
-                            break;
                         case (int)Helper.Menu.DeleteDrugCategory:
+                            groupController.Delete();
+                            break;
+                        case (int)Helper.Menu.UpdateDrugCategory:
                             break;
                     }
                 }
@@ -41,6 +42,7 @@ namespace AcademyApp
             {
               Helper.InfoText("1- Add new Drug Category ");
               Helper.InfoText("2- Show All Drug Category ");
+              Helper.InfoText("3- Delete Drug Category");
             }
         }
     }
