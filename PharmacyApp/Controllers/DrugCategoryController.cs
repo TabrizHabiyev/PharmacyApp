@@ -10,7 +10,7 @@ namespace PharmacyApp.Controllers
     public class DrugCategoryController
     {
         public DrugCategoryService drugCategoryService { get; }
-
+           
         public DrugCategoryController()
         {
             drugCategoryService = new DrugCategoryService();
@@ -22,10 +22,10 @@ namespace PharmacyApp.Controllers
         {
         EnterName: Helper.SelectText("Enter Drug Category");
             string name = Console.ReadLine();
-
+            
             if (name == null || name == " ")
             {
-                Helper.DangerText("Enter correct category name");
+                Helper.DangerText("Please Enter correct category name");
                 goto EnterName;
             }
             else
