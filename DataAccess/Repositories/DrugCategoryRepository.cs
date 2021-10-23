@@ -45,7 +45,15 @@ namespace DataAccess.Repositories
 
         public List<DrugCategory> GetAll(Predicate<DrugCategory> filter = null)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return filter == null ? DbContext.Categories
+                    : DbContext.Categories.FindAll(filter);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public bool Update(DrugCategory entity)

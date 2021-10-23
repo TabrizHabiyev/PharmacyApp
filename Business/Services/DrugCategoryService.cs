@@ -19,7 +19,7 @@ namespace Business.Services
         }
 
 
-        //Drug Catecory
+        //Drug Catecory create
         public DrugCategory Create(DrugCategory catecory)
         {
             try
@@ -43,6 +43,12 @@ namespace Business.Services
         public DrugCategory Get(string Name)
         {
             return drugCagoryRepository.Get(g => g.Name.ToLower() == Name.ToLower());
+        }
+
+
+        public List<DrugCategory> GetAll()
+        {
+            return drugCagoryRepository.GetAll();
         }
 
 

@@ -28,6 +28,7 @@ namespace AcademyApp
                             groupController.Create();
                             break;
                         case (int)Helper.Menu.ShowDrugCategory:
+                            groupController.GetAll();
                             break;
                         case (int)Helper.Menu.UpdateDrugCategory:
                             break;
@@ -38,7 +39,8 @@ namespace AcademyApp
             }
             static void ShowMenu()
             {
-              Helper.InfoText("1- Add new Drug Category");
+              Helper.InfoText("1- Add new Drug Category ");
+              Helper.InfoText("2- Show All Drug Category ");
             }
         }
     }

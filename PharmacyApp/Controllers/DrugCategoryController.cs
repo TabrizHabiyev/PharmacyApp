@@ -46,5 +46,15 @@ namespace PharmacyApp.Controllers
             }
 
         }
+
+        //Show All Drug Category
+        public void GetAll()
+        {
+            Helper.InfoText("All groups:");
+            foreach (DrugCategory group in drugCategoryService.GetAll())
+            {
+                Helper.InfoText($"{group.Id} - {group.Name}");
+            }
+        }
     }
 }
