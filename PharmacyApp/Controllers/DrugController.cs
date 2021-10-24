@@ -99,13 +99,32 @@ namespace PharmacyApp.Controllers
             GetAll();
             Helper.SelectText("Enter group id:");
             string input = Console.ReadLine();
-            Helper.SelectText("Enter new name:");
-            string newName = Console.ReadLine();
+            Helper.SelectText("Enter drug new name");
+            string drugName = Console.ReadLine();
+            Helper.SelectText("Enter drug price");
+            double drugPrice = Convert.ToDouble(Console.ReadLine());
+            Helper.SelectText("Drug  showcase");
+            string showcase = Console.ReadLine();
+            Helper.SelectText("Medicine company");
+            string company = Console.ReadLine();
+            Helper.SelectText("Drug country");
+            string country = Console.ReadLine();
+            Helper.SelectText("Drug count");
+            int count = int.Parse(Console.ReadLine());
             int groupId;
             bool isTrue = int.TryParse(input, out groupId);
             if (isTrue)
             {
-                if (drugService.Update(groupId,newName) != null)
+                Drug drug = new Drug
+                {
+                    Name = drugName,
+                    Price = drugPrice,
+                    Showcase = showcase,
+                    Company = company,
+                    ProducerCountry = country,
+                    Count = count
+                };
+                if (drugService.Update(groupId,drug) != null)
                 {
                     Helper.SuggestText("Group is update");
                     return;

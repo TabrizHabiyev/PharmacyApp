@@ -65,12 +65,16 @@ namespace DataAccess.Repositories
             }
         }
 
-        public bool Update(Drug entity,string newName)
+        public bool Update(Drug entity,Drug updateDrug)
         {
             try
             {
                 Drug dbStudent = Get(s => s.Id == entity.Id);
-                entity.Name = newName;
+                dbStudent.Name = updateDrug.Name;
+                dbStudent.Price = updateDrug.Price;
+                dbStudent.Company = updateDrug.Company;
+                dbStudent.Count = updateDrug.Count;
+                dbStudent.Showcase = updateDrug.Showcase;
                 return true;
             }
             catch (Exception)

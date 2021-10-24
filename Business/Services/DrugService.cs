@@ -51,12 +51,12 @@ namespace Business.Services
         }
 
         //Drug Update Service
-        public Drug Update(int Id,string newName)
+        public Drug Update(int Id,Drug updateDrug)
         {
             Drug dbDrug = drugRepository.Get(g => g.Id == Id);
             if (dbDrug != null)
             {
-                drugRepository.Update(dbDrug,newName);
+                drugRepository.Update(dbDrug,updateDrug);
                 return dbDrug;
             }
             else
