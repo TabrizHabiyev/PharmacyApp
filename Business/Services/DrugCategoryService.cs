@@ -51,13 +51,28 @@ namespace Business.Services
             return drugCagoryRepository.GetAll();
         }
 
-
+        //Delete Drug Category 
         public DrugCategory Delete(int Id)
         {
             DrugCategory dbGroup = drugCagoryRepository.Get(g => g.Id == Id);
             if (dbGroup != null)
             {
                 drugCagoryRepository.Delete(dbGroup);
+                return dbGroup;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        //Update Drug Category
+        public DrugCategory Update(int Id ,string NewName)
+        {
+            DrugCategory dbGroup = drugCagoryRepository.Get(g => g.Id == Id);
+            if (dbGroup != null)
+            {
+                drugCagoryRepository.Update(dbGroup,NewName);
                 return dbGroup;
             }
             else

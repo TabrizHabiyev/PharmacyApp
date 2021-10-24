@@ -47,7 +47,7 @@ namespace PharmacyApp.Controllers
 
         }
 
-        //Show All Drug Category
+        //Show All Drug Category Controller
         public void GetAll()
         {
             Helper.InfoText("All groups:");
@@ -58,7 +58,7 @@ namespace PharmacyApp.Controllers
         }
 
 
-        //Delete Drug Category
+        //Delete Drug Category Controller
         public void Delete()
         {
             GetAll();
@@ -85,5 +85,38 @@ namespace PharmacyApp.Controllers
             }
 
         }
+
+        //Update Drug Category Controller
+        public void Update()
+        {
+            GetAll();
+            Helper.SelectText("Enter group id:");
+            string input = Console.ReadLine();
+            Helper.SelectText("Enter new name:");
+            string name = Console.ReadLine();
+            int groupId;
+            bool isTrue = int.TryParse(input, out groupId);
+            if (isTrue)
+            {
+                if (drugCategoryService.Update(groupId,name) != null)
+                {
+                    Helper.SuggestText("Group is update");
+                    return;
+                }
+                else
+                {
+                    Helper.DangerText($"{groupId} is not find");
+                    return;
+                }
+            }
+            else
+            {
+                Helper.DangerText($"Please, select correct format");
+            }
+
+        }
+
+
+
     }
 }

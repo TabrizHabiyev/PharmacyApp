@@ -35,7 +35,7 @@ namespace DataAccess.Repositories
             }
         }
 
-
+        //Remove Category
         public bool Delete(DrugCategory entity)
         {
             try
@@ -51,7 +51,7 @@ namespace DataAccess.Repositories
         }
 
 
-
+        //Show All Category
         public List<DrugCategory> GetAll(Predicate<DrugCategory> filter = null)
         {
             try
@@ -61,6 +61,22 @@ namespace DataAccess.Repositories
             }
             catch (Exception)
             {
+                throw;
+            }
+        }
+
+        //Update Category
+        public bool Update(DrugCategory name , string newName)
+        {
+            try
+            {
+                name.Name = newName;
+
+                return true;
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }
