@@ -13,6 +13,7 @@ namespace Entities.Models
         public string Showcase { get; set; }
         public string Company { get; set; }
         public string ProducerCountry { get; set; }
+        public int Count { get; set; }
         public DrugCategory Category { get; set; }
     }
 }

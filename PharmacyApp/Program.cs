@@ -10,7 +10,8 @@ namespace AcademyApp
     {
         static void Main(string[] args)
         {
-            DrugCategoryController groupController = new DrugCategoryController();
+            DrugCategoryController drugCategoryController = new DrugCategoryController();
+            DrugController drugController = new DrugController();
 
             Console.WriteLine("Hello");
 
@@ -23,28 +24,32 @@ namespace AcademyApp
                 if (isTrue && menu >= 1 && menu <= 9)
                 {
                     switch (menu)
-                    {
+                    {           //Switch for Drug Category
                         case (int)Helper.Menu.AddNewDrugCategory:
-                            groupController.Create();
+                            drugCategoryController.Create();
                             break;
                         case (int)Helper.Menu.ShowDrugCategory:
-                            groupController.GetAll();
+                            drugCategoryController.GetAll();
                             break;
                         case (int)Helper.Menu.DeleteDrugCategory:
-                            groupController.Delete();
+                            drugCategoryController.Delete();
                             break;
                         case (int)Helper.Menu.UpdateDrugCategory:
-                            groupController.Update();
+                            drugCategoryController.Update();
+                            break;
+                             //Switch for Drug
+                        case (int)Helper.Menu.AddNewDrug:
+                            drugController.Create();
                             break;
                     }
                 }
             }
             static void ShowMenu()
             {
-              Helper.InfoText("1- Add new Drug Category ");
-              Helper.InfoText("2- Show All Drug Category ");
-              Helper.InfoText("3- Delete Drug Category");
-              Helper.InfoText("4- Update Drug Category");
+              Helper.InfoText("1- Add new Drug Category:        5- Add new Drug: ");
+              Helper.InfoText("2- Show All Drug Category:       6- Show all Drug: ");
+              Helper.InfoText("3- Delete Drug Category:         7- Delete  Drug: ");
+              Helper.InfoText("4- Update Drug Category:         8- Update  Drug: "); 
             }
         }
     }

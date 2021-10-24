@@ -43,18 +43,18 @@ namespace Utilies.Helpers
             ShowDrugCategory,
             DeleteDrugCategory,
             UpdateDrugCategory,
-           
+            AddNewDrug,
 
 
-         /*   AddNewDrug,
-            UpdateDrug,
-            DeleteDrug,
-            GetDrugWithId,
-            GetDrugWithName,
-            GetAllDrug,
-            GetDrugWithSize,
-            CreateDrugCategory,
-            GetAllDrugWithCategory */
+            /* 
+               UpdateDrug,
+               DeleteDrug,
+               GetDrugWithId,
+               GetDrugWithName,
+               GetAllDrug,
+               GetDrugWithSize,
+               CreateDrugCategory,
+               GetAllDrugWithCategory */
         }
     }
 }
