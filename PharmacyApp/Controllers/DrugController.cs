@@ -18,34 +18,23 @@ namespace PharmacyApp.Controllers
         //Create Drug Controller
         public void Create()
         {
-
             Helper.SelectText("Enter drug category");
             string drugCategory = Console.ReadLine();
-
             Helper.SelectText("Enter drug name");
             string drugName = Console.ReadLine();
-
             Helper.SelectText("Enter drug price");
             double drugPrice = Convert.ToDouble(Console.ReadLine());
-
             Helper.SelectText("Drug showcase");
             string showcase = Console.ReadLine();
-
             Helper.SelectText("Medicine company");
             string company = Console.ReadLine();
-
             Helper.SelectText("Drug country");
             string country = Console.ReadLine();
-
             Helper.SelectText("Drug count");
             int count = int.Parse(Console.ReadLine());
-
-
             Drug drug = new Drug {Name = drugName,Price = drugPrice , 
             Showcase =showcase,Company = company,ProducerCountry = country , Count = count };
-
             Drug drugnew = drugService.Create(drug,drugCategory);
-
             if (drugnew != null)
             {
                 Helper.SuggestText($"New Drug is Created - {drug.Name}");
@@ -55,7 +44,6 @@ namespace PharmacyApp.Controllers
         }
 
         //All drug
-
         public void GetAll()
         {
             Helper.InfoText("All Drugs:");
@@ -104,6 +92,35 @@ namespace PharmacyApp.Controllers
                 Helper.InfoText("Producter Country :"); Helper.SuggestText(drug.ProducerCountry);
                 Helper.InfoText("Number of drugs: "); Helper.SuggestText($"{drug.Count} \n");
             }
+        }
+
+        public void Update()
+        {
+            GetAll();
+            Helper.SelectText("Enter group id:");
+            string input = Console.ReadLine();
+            Helper.SelectText("Enter new name:");
+            string newName = Console.ReadLine();
+            int groupId;
+            bool isTrue = int.TryParse(input, out groupId);
+            if (isTrue)
+            {
+                if (drugService.Update(groupId,newName) != null)
+                {
+                    Helper.SuggestText("Group is update");
+                    return;
+                }
+                else
+                {
+                    Helper.DangerText($"{groupId} is not find");
+                    return;
+                }
+            }
+            else
+            {
+                Helper.DangerText($"Please, select correct format");
+            }
+
         }
 
     }

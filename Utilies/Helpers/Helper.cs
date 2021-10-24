@@ -45,14 +45,12 @@ namespace Utilies.Helpers
             UpdateDrugCategory,
             AddNewDrug,
             ShowAllDrug,
-            DeleteDrug
+            DeleteDrug,
+            UpdateDrug
 
             /* 
-               UpdateDrug,
-               DeleteDrug,
                GetDrugWithId,
                GetDrugWithName,
-               GetAllDrug,
                GetDrugWithSize,
                CreateDrugCategory,
                GetAllDrugWithCategory */

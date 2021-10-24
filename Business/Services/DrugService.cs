@@ -35,7 +35,6 @@ namespace Business.Services
                 return null;
             }
         }
-
         //Drug delete service
         public Drug Delete(int Id)
         {
@@ -43,6 +42,21 @@ namespace Business.Services
             if (dbDrug != null)
             {
                 drugRepository.Delete(dbDrug);
+                return dbDrug;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        //Drug Update Service
+        public Drug Update(int Id,string newName)
+        {
+            Drug dbDrug = drugRepository.Get(g => g.Id == Id);
+            if (dbDrug != null)
+            {
+                drugRepository.Update(dbDrug,newName);
                 return dbDrug;
             }
             else
