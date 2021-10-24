@@ -41,6 +41,12 @@ namespace AcademyApp
                         case (int)Helper.Menu.AddNewDrug:
                             drugController.Create();
                             break;
+                        case (int)Helper.Menu.ShowAllDrug:
+                            drugController.ShowAllDrug();
+                            break;
+                        case (int)Helper.Menu.DeleteDrug:
+                            drugController.Delete();
+                            break;
                     }
                 }
             }

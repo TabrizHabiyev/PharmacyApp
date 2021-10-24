@@ -24,9 +24,19 @@ namespace DataAccess.Repositories
             }
         }
 
+
         public bool Delete(Drug entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DbContext.Drugs.Remove(entity);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public Drug Get(Predicate<Drug> filter = null)
@@ -44,7 +54,15 @@ namespace DataAccess.Repositories
 
         public List<Drug> GetAll(Predicate<Drug> filter = null)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return filter == null ? DbContext.Drugs
+                    : DbContext.Drugs.FindAll(filter);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public bool Update(Drug entity)

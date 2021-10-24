@@ -44,7 +44,8 @@ namespace Utilies.Helpers
             DeleteDrugCategory,
             UpdateDrugCategory,
             AddNewDrug,
-
+            ShowAllDrug,
+            DeleteDrug
 
             /* 
                UpdateDrug,
