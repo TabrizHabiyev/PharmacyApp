@@ -75,6 +75,7 @@ namespace DataAccess.Repositories
                 dbStudent.Company = updateDrug.Company;
                 dbStudent.Count = updateDrug.Count;
                 dbStudent.Showcase = updateDrug.Showcase;
+           
                 return true;
             }
             catch (Exception)

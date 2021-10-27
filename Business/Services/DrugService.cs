@@ -1,6 +1,7 @@
 ﻿using Business.Interfaces;
 using DataAccess.Repositories;
 using Entities.Models;
+using Utilies.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,54 +22,82 @@ namespace Business.Services
         //Drug create service
         public Drug Create(Drug drug, string CategoryName)
         {
-            DrugCategory dbGroup = drugCategoryService.Get(CategoryName);
-            if (dbGroup != null)
+            try
             {
-                drug.Category = dbGroup;
-                drug.Id = count;
-                drugRepository.Create(drug);
-                count++;
-                return drug;
+                DrugCategory dbGroup = drugCategoryService.Get(CategoryName);
+                if (dbGroup != null)
+                {
+                    drug.Category = dbGroup;
+                    drug.Id = count;
+                    drugRepository.Create(drug);
+                    count++;
+                    return drug;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
+            catch (ExceptionMessage)
             {
+
+                Console.WriteLine(ExceptionMessage.DrugAddMessage);
                 return null;
             }
+
         }
         //Drug delete service
         public Drug Delete(int Id)
         {
-            Drug dbDrug = drugRepository.Get(g => g.Id == Id);
-            if (dbDrug != null)
+            try
             {
-                drugRepository.Delete(dbDrug);
-                return dbDrug;
+                Drug dbDrug = drugRepository.Get(g => g.Id == Id);
+                if (dbDrug != null)
+                {
+                    drugRepository.Delete(dbDrug);
+                    return dbDrug;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
+            catch (ExceptionMessage)
             {
+                Console.WriteLine(ExceptionMessage.DrugDeleteMessage);
                 return null;
             }
+
         }
 
         //Drug Update Service
         public Drug Update(int Id,Drug updateDrug)
         {
-            Drug dbDrug = drugRepository.Get(g => g.Id == Id);
-            if (dbDrug != null)
+            try
             {
-                drugRepository.Update(dbDrug,updateDrug);
-                return dbDrug;
+                Drug dbDrug = drugRepository.Get(g => g.Id == Id);
+                if (dbDrug != null)
+                {
+                    drugRepository.Update(dbDrug, updateDrug);
+                    return dbDrug;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
+            catch (ExceptionMessage)
             {
+                Console.WriteLine(ExceptionMessage.DrugUpdateMessage);
                 return null;
             }
+    
         }
 
         public List<Drug> GetAll()
         {
+          
             return drugRepository.GetAll();
         }
-
     }
 }

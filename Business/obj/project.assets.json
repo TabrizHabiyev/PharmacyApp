@@ -24,6 +24,16 @@
         "runtime": {
           "bin/placeholder/Entities.dll": {}
         }
+      },
+      "Utilies/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Utilies.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utilies.dll": {}
+        }
       }
     }
   },
@@ -37,12 +47,18 @@
       "type": "project",
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
+    },
+    "Utilies/1.0.0": {
+      "type": "project",
+      "path": "../Utilies/Utilies.csproj",
+      "msbuildProject": "../Utilies/Utilies.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "DataAccess >= 1.0.0",
-      "Entities >= 1.0.0"
+      "Entities >= 1.0.0",
+      "Utilies >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -77,6 +93,9 @@
             },
             "C:\\Users\\Tabriz\\Desktop\\PharmacyApp\\PharmacyApp\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\Tabriz\\Desktop\\PharmacyApp\\PharmacyApp\\Entities\\Entities.csproj"
+            },
+            "C:\\Users\\Tabriz\\Desktop\\PharmacyApp\\PharmacyApp\\Utilies\\Utilies.csproj": {
+              "projectPath": "C:\\Users\\Tabriz\\Desktop\\PharmacyApp\\PharmacyApp\\Utilies\\Utilies.csproj"
             }
           }
         }

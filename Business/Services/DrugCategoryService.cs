@@ -4,6 +4,7 @@ using Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Utilies.Helpers;
 
 namespace Business.Services
 {
@@ -33,9 +34,9 @@ namespace Business.Services
                 count++;
                 return catecory;
             }
-            catch (Exception)
+            catch (ExceptionMessage)
             {
-
+                Console.WriteLine(ExceptionMessage.CategoryAddMessage);
                 return null;
             }
         }
@@ -54,31 +55,50 @@ namespace Business.Services
         //Delete Drug Category 
         public DrugCategory Delete(int Id)
         {
-            DrugCategory dbGroup = drugCagoryRepository.Get(g => g.Id == Id);
-            if (dbGroup != null)
+            try
             {
-                drugCagoryRepository.Delete(dbGroup);
-                return dbGroup;
+                DrugCategory dbGroup = drugCagoryRepository.Get(g => g.Id == Id);
+                if (dbGroup != null)
+                {
+                    drugCagoryRepository.Delete(dbGroup);
+                    return dbGroup;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
+            catch (ExceptionMessage)
             {
+
+                Console.WriteLine(ExceptionMessage.CategoryDeleteMessage);
                 return null;
             }
+    
         }
 
         //Update Drug Category
         public DrugCategory Update(int Id ,string NewName)
         {
-            DrugCategory dbGroup = drugCagoryRepository.Get(g => g.Id == Id);
-            if (dbGroup != null)
+            try
             {
-                drugCagoryRepository.Update(dbGroup,NewName);
-                return dbGroup;
+                DrugCategory dbGroup = drugCagoryRepository.Get(g => g.Id == Id);
+                if (dbGroup != null)
+                {
+                    drugCagoryRepository.Update(dbGroup, NewName);
+                    return dbGroup;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
+            catch (ExceptionMessage)
             {
+                Console.WriteLine(ExceptionMessage.CategoryUpdateMessage);
                 return null;
             }
+
         }
 
     }
